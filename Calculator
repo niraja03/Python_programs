@@ -1,0 +1,26 @@
+#int_input
+num1 = int(input("enter your first number  "))
+num2 = int(input("enter your second number  "))
+
+#float_input
+num3 = float(input("enter your third number  "))
+num4 = float(input("enter your fourth number  "))
+
+#assigning values using arithmetic operators
+result_add = num1 + num2+ num3+ num4
+result_sub = num1 - num2- num3- num4
+result_div = num1 / num2/ num3/ num4
+result_floordiv = num1 // num2// num3// num4
+result_square = num1 ** num2** num3** num4
+result_multiplicatn = num1 * num2* num3* num4
+result_complexno = num1(2,3) , num2(4,5) , num3(6,7) , num4(8,9)
+
+#print all the results
+print(result_add)
+print(result_sub)
+print(result_div)
+print(result_floordiv)
+print(result_square)
+print(result_multiplicatn)
+print(result_complexno)
+
