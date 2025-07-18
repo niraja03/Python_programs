@@ -1,0 +1,29 @@
+# Sets containing student names (using alphabets as names)
+cricket = {'A', 'B', 'C', 'D'}
+badminton = {'C', 'D', 'E'}
+football = {'A', 'F', 'E'}
+
+# Complete list of all students (including those who don't play anything)
+all_students = cricket | badminton | football | {'G', 'H'}  # G and H play no sport
+
+# Function: Students who play both cricket and badminton
+def both_cricket_badminton(c, b):
+    return c & b  # common students in both sets
+
+# Function: Students who play only cricket or only badminton (not both)
+def either_cricket_or_badminton_not_both(c, b):
+    return c ^ b  # symmetric difference: either/cricket/badminton but not both
+
+# Function: Students who play neither cricket nor badminton
+def neither_cricket_nor_badminton(all_s, c, b):
+    return all_s - (c | b)  # remove those who play cricket or badminton
+
+# Function: Students who play cricket and football but not badminton
+def cricket_and_football_not_badminton(c, f, b):
+    return (c & f) - b  # common in cricket and football but not in badminton
+
+# ---- Calling the functions and printing results ----
+print("1. Both Cricket & Badminton:", both_cricket_badminton(cricket, badminton))
+print("2. Either Cricket or Badminton but NOT both:", either_cricket_or_badminton_not_both(cricket, badminton))
+print("3. Students who play neither Cricket nor Badminton:", neither_cricket_nor_badminton(all_students, cricket, badminton))
+print("4. Cricket and Football but NOT Badminton:", cricket_and_football_not_badminton(cricket, football, badminton))
